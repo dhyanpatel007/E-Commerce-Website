@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Diamond Tool - Ceramic Cutters & Abrasives</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x400/?tiles,ceramic') no-repeat center center/cover;
+            color: black;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+
+        .services, .about, .contact {
+            background: white;
+            padding: 40px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2, .about h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services .service-item {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .services .service-item h3 {
+            color: #2980b9;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2980b9;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real Diamond Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Your Partner in Quality Ceramic Cutting & Polishing</h1>
+        <p>Providing top-notch ceramic cutters and abrasives to help shape your tiles with precision.</p>
+    </section>
+
+    <section id="services" class="services container">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Ceramic Cutters</h3>
+            <p>High-quality cutters that provide precision cuts for ceramic tiles, sourced from trusted factories.</p>
+        </div>
+        <div class="service-item">
+            <h3>Abrasives</h3>
+            <p>Durable abrasives that ensure smooth and polished finishes for your ceramic products.</p>
+        </div>
+        <div class="service-item">
+            <h3>Quality Assurance</h3>
+            <p>We ensure that each product meets industry standards before reaching our customers.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about container">
+        <h2>About Us</h2>
+        <p>Based in Morbi, India, Real Diamond Tool specializes in providing top-grade ceramic cutters and abrasives. Our mission is to support ceramic manufacturers in producing the finest tiles by offering products that ensure precision and quality.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Real Diamond Tool. All rights reserved.</p>
+    </footer>
+
+    <div class="scroll-top" id="scrollTopBtn">&#8679;</div>
+
+    <script>
+        // JavaScript for scroll-to-top button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        };
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
