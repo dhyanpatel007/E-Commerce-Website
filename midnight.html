@@ -16,7 +16,6 @@
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
       color: #333;
-      overflow-x: hidden;
     }
 
     /* Header Styling */
@@ -40,53 +39,12 @@
       text-transform: uppercase;
     }
 
-    /* Navigation with Dropdowns */
-    .nav {
-      display: flex;
-      gap: 20px;
-      position: relative;
-    }
-
-    .nav > div {
-      position: relative;
-    }
-
     .nav a {
       color: #333;
       text-decoration: none;
       font-weight: 500;
       padding: 10px;
       display: inline-block;
-    }
-
-    .nav a:hover {
-      color: #0071e3;
-    }
-
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 40px;
-      left: 0;
-      background-color: #fff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      overflow: hidden;
-      z-index: 10;
-    }
-
-    .dropdown a {
-      display: block;
-      padding: 10px 20px;
-      color: #333;
-    }
-
-    .dropdown a:hover {
-      background-color: #f0f0f0;
-    }
-
-    .nav > div:hover .dropdown {
-      display: block;
     }
 
     /* Hero Section */
@@ -130,56 +88,33 @@
       background-color: #005bb5;
     }
 
-    /* Products Section */
-    .products {
+    /* Link Section */
+    .link-section {
       padding: 100px 10%;
       background: #fff;
       text-align: center;
     }
 
-    .products h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
+    .link-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
       color: #000;
     }
 
-    .product-list {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .product {
-      background: #f8f8f8;
-      border-radius: 12px;
-      width: 280px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-
-    .product h3 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .product p {
+    .link-section a {
+      display: inline-block;
+      padding: 15px 30px;
       font-size: 1rem;
-      color: #666;
+      font-weight: bold;
+      color: #fff;
+      background-color: #0071e3;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
 
-    .product:hover {
-      transform: translateY(-10px);
+    .link-section a:hover {
+      background-color: #005bb5;
     }
 
     /* Footer */
@@ -197,23 +132,9 @@
   <header class="header">
     <div class="logo">Patels</div>
     <nav class="nav">
-      <div>
-        <a href="#home">Home</a>
-      </div>
-      <div>
-        <a href="#">Categories</a>
-        <div class="dropdown">
-          <a href="#electronics">Electronics</a>
-          <a href="#fashion">Fashion</a>
-          <a href="#home-kitchen">Home & Kitchen</a>
-        </div>
-      </div>
-      <div>
-        <a href="#products">All Products</a>
-      </div>
-      <div>
-        <a href="#contact">Contact</a>
-      </div>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -221,48 +142,57 @@
   <section class="hero" id="home">
     <h1>Welcome to Patels Store</h1>
     <p>Discover the best products at unbeatable prices. Your one-stop shop for all things amazing!</p>
-    <button onclick="scrollToSection('products')">Shop Now</button>
+    <button onclick="scrollToSection('smartphones')">Shop Now</button>
   </section>
 
-  <!-- Products Section -->
-  <section class="products" id="products">
-    <h2>Featured Products</h2>
-    <div class="product-list">
-      <div class="product">
-        <img src="images/iphone.webp" alt="Product 1" />
-        <h3>Smartphone</h3>
-        <p>Latest model with advanced features and sleek design.</p>
-        <a href="https://www.apple.com/in/iphone/" target="_blank" >Click here for iphones</a>
-        <br>
-        <a href="https://www.samsung.com/in/smartphones/?srsltid=AfmBOorFrBwBL68mTYGwxbOiDWFpqfn28OFJmnucT30wtTxR04eHqNfY" target="_blank" >Click here for samsung phones</a>
-      </div>
-      <div class="product">
-        <img src="images/Headphones.jpg" alt="Product 2" />
-        <h3>Headphones</h3>
-        <p>High-quality sound with noise cancellation.</p>
-      </div>
-      <div class="product">
-        <img src="images/emirates format.jpg" alt="Product 3" />
-        <h3>Air Bookings</h3>
-        <p>Cheap and best flights with us</p>
-      </div>
-      <div class="product">
-        <img src="images/fashion.png" alt="Product 4" />
-        <h3>Clothes Outlet</h3>
-        <p>Comfortable and stylish, ideal for everyday wear.</p>
-      </div>
-    </div>
+  <!-- Smartphones Link Section -->
+  <section class="link-section" id="smartphones">
+    <h2>Explore Our Smartphone Collection</h2>
+    <p>Get the latest smartphones from top brands.</p>
+    <img src="images/iphone.jpg" alt="Smartphones" style="display: block; margin-left: auto; margin-right: auto;">
+    <a href="smartphones.html">Click here for Smartphones</a>
+  </section>
+
+  <!-- Air Bookings Link Section -->
+  <section class="link-section" id="air-bookings">
+    <h2>Book Your Flights with Us</h2>
+    <p>Find the best airfares and book your next flight!</p>
+    <br>
+    <br>
+    <img src="images/emirates.jpg" alt="Product Image" style="display: block; margin-left: auto; margin-right: auto;">
+    <br>
+    <a href="air-bookings.html">Click here for Air Bookings</a>
+  </section>
+
+  <!-- Fashion Outlet Link Section -->
+  <section class="link-section" id="fashion-outlet">
+    <h2>Discover Fashion at Its Best</h2>
+    <p>Browse through our latest collection of fashion items.</p>
+    <br>
+    <br>
+    <img src="images/Fashion.jpg" alt="Product Image" style="display: block; margin-left: auto; margin-right: auto;">
+    <br>
+    <a href="fashion-outlet.html">Click here for Fashion Outlet</a>
+  </section>
+
+  <!-- Headphones Link Section -->
+  <section class="link-section" id="headphones">
+    <h2>Shop for Quality Headphones</h2>
+    <p>Find the best headphones for music lovers and audiophiles.</p>
+    <img src="images/Headphones.jpg" alt="Product Image" style="display: block; margin-left: auto; margin-right: auto;">
+    <br>
+    <a href="headphones.html">Click here for Headphones</a>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
-    <p>© 2024 Patels Store | Privacy Policy | Terms of Service</p>
+  <footer class="footer">
+    <p>&copy; 2024 Patels. All Rights Reserved.</p>
   </footer>
 
+  <!-- JavaScript for Smooth Scroll -->
   <script>
-    // Smooth scroll function for navigation
     function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
